@@ -7,4 +7,4 @@ spring:
     password: library_password
     jpa:
       hibernate:
-        ddl-auto: none
+        ddl-auto: validate
