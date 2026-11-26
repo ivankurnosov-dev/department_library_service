@@ -1,1 +1,15 @@
-services: {}
+services:
+  postgres:
+    image: postgres:17
+    container_name: library_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: library_db
+      POSTGRES_USER: library_user
+      POSTGRES_PASSWORD: library_password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
